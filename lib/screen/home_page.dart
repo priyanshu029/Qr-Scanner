@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:qr_scanner/screen/auth_page.dart';
 import 'package:qr_scanner/screen/mark_attendance.dart';
 import 'package:qr_scanner/service/get_attendance_data.dart';
 
@@ -37,12 +39,21 @@ class _HomePageState extends State<HomePage> {
         title: Text('Qr Scanner'),
         actions: [
           IconButton(
-              icon: Icon(Icons.add),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return MarkAttendence(widget.email);
-                }));
-              })
+            icon: Icon(Icons.logout),
+            onPressed: () async {
+              final googleSignIn = GoogleSignIn();
+              await googleSignIn.signOut();
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return AuthPage();
+                  },
+                ),
+                (route) => false,
+              );
+            },
+          ),
         ],
       ),
       body: Container(
@@ -69,6 +80,14 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
               ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return MarkAttendence(widget.email);
+          }));
+        },
+        child: Icon(Icons.add),
       ),
     );
   }
