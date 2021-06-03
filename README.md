@@ -1,8 +1,34 @@
-# qr_scanner
+# QR Scanner
 
-A new Flutter project.
+A new Flutter project that can help to keep track of attendance.
 
-## Getting Started
+
+
+
+
+## Screen Shots
+
+
+
+
+
+<table>
+  <tr>
+    <td>Authentication Page</td>
+     <td>Home Page</td>
+     <td>Scanning Page</td>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/71308593/120548357-e4604500-c40f-11eb-8c04-fb4980e98a7c.png" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/71308593/120631294-59219680-c485-11eb-9658-1ba6a665582d.png" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/71308593/120548489-078af480-c410-11eb-9d54-bc4abd6fb05f.png" width=270 height=480></td>
+  </tr>
+ </table>
+![image]()
+
+
+
+## Getting Started 
 
 This project is a starting point for a Flutter application.
 
