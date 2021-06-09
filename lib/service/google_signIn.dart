@@ -28,7 +28,7 @@ class GoogleAuth {
     if (user == null) {
       return null;
     } else {
-      return await user.currentUser.email;
+      return await user.email;
     }
   }
 }

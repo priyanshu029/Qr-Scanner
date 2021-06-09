@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:qr_scanner/screen/home_page.dart';
 import 'package:qr_scanner/screen/mark_attendance.dart';
 import 'package:qr_scanner/service/google_signIn.dart';
 
@@ -33,7 +34,7 @@ class _AuthPageState extends State<AuthPage> {
                       print('Lets go to home page');
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return MarkAttendence(currentUser);
+                        return HomePage(currentUser);
                       }));
                     } else {
                       print('some thing went wrong');
